@@ -7,14 +7,12 @@ interface ResearchCardProps {
   title: string;
   description: string;
   image: any;
-  color: string;
 }
 
 export function ResearchCard({
   title,
   description,
-  image,
-  color
+  image
 }: ResearchCardProps) {
   return (
     <div className="relative w-[400px] flex-none aspect-[10/16] bg-black rounded-2xl overflow-hidden">

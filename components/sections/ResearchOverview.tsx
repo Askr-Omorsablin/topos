@@ -448,7 +448,7 @@ export default function ResearchOverview() {
     }, 100);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [beamConnections]);
 
   // 增强清理逻辑
   useEffect(() => {

@@ -124,7 +124,7 @@ const ButterflyEffect: React.FC = () => {
     })
 
     let time = 0
-    let startTime = Date.now()
+    const startTime = performance.now();
     let animationFrameId: number
 
     const animate = () => {

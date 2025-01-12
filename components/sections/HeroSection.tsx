@@ -24,7 +24,7 @@ export default function HeroSection() {
 
         {/* 副标语 */}
         <p className="text-xl md:text-2xl text-white/60 font-light max-w-2xl mx-auto leading-relaxed">
-        Don't need to care about the planning and execution of the path. & Know same as the best of the race knowsn
+        Don&apos;t need to care about the planning and execution of the path. & Know same as the best of the race knowsn
         </p>
 
         {/* CTA按钮组 */}

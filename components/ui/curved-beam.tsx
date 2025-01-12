@@ -22,8 +22,8 @@ export function CurvedBeam({
   startSocket = 'right',
   endSocket = 'bottom'
 }: CurvedBeamProps) {
-  const beamRef = React.useRef<any>(null);
-  const lineRef = React.useRef<any>(null);
+  const beamRef = React.useRef<LeaderLine | null>(null);
+  const lineRef = React.useRef<LeaderLine | null>(null);
   const initialized = React.useRef(false);
 
   const getDynamicDash = () => ({
@@ -50,8 +50,8 @@ export function CurvedBeam({
           
           // 基础曲线路径
           lineRef.current = new LeaderLine.default(
-            fromRef.current,
-            toRef.current,
+            fromRef.current as Element,
+            toRef.current as Element,
             {
               color: 'rgba(40, 40, 40, 0.6)',
               size: 2,
@@ -69,8 +69,8 @@ export function CurvedBeam({
           const dashConfig = getDynamicDash();
           
           beamRef.current = new LeaderLine.default(
-            fromRef.current,
-            toRef.current,
+            fromRef.current as Element,
+            toRef.current as Element,
             {
               path: 'arc',
               startSocket,
@@ -82,8 +82,8 @@ export function CurvedBeam({
               size: isActive ? 3 : 2,
               gradient: true,
               color: isActive 
-                ? ['rgba(236, 72, 153, 0.8)', 'rgba(168, 85, 247, 0.8)']
-                : ['rgba(249, 115, 22, 0.8)', 'rgba(168, 85, 247, 0.8)'],
+                ? ['rgba(236, 72, 153, 0.8)', 'rgba(168, 85, 247, 0.8)'] as any
+                : ['rgba(249, 115, 22, 0.8)', 'rgba(168, 85, 247, 0.8)'] as any,
               dash: dashConfig,
               dropShadow: {
                 dx: 0,
