@@ -1,0 +1,12 @@
+.butterfly-glow {
+  --butterfly-color: #FFB06B;
+  --butterfly-blur: 4px;
+  
+  filter: blur(var(--butterfly-blur));
+  mix-blend-mode: screen;
+}
+
+.butterfly-wing {
+  transform-origin: center;
+  will-change: transform;
+} 
