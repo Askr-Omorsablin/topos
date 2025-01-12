@@ -3,7 +3,6 @@
 import * as React from "react";
 import { Beam } from "./animated-beam";
 import { ShimmerBeamLabel } from "./shimmer-beam-label";
-import { cn } from "@/lib/utils";
 
 export interface BeamConnection {
   id: string;

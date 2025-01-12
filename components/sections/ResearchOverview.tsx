@@ -1,7 +1,7 @@
 'use client'
 import * as React from 'react'
 import { motion } from 'framer-motion'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, useMemo } from 'react'
 import { cn } from "@/lib/utils"
 import { 
   Brain, 
@@ -394,7 +394,7 @@ export default function ResearchOverview() {
   const modelingLambdaBottomRef = useRef<HTMLDivElement>(null);
 
   // 修改连线配置，添加引用点检查
-  const beamConnections: BeamSystemConnection[] = [
+  const beamConnections = useMemo(() => [
     {
       id: 'acquired-info',
       from: infoWorldLeftRef,
@@ -425,7 +425,7 @@ export default function ResearchOverview() {
       to: adaptorContainerLeftRef,
       isActive: activeSection === 'human'
     }
-  ];
+  ], []); // 空依赖数组，因为这些连接是静态的
 
   // 修改初始化逻辑
   useEffect(() => {

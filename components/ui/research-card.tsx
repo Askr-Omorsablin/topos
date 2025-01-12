@@ -1,12 +1,12 @@
 'use client';
 
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import React from 'react';
 
 interface ResearchCardProps {
   title: string;
   description: string;
-  image: any;
+  image: StaticImageData;
 }
 
 export function ResearchCard({
